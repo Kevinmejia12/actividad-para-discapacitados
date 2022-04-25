@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <!--el codigo fue ejecutado en tres navegadores diferentes operagx, edge, chrome y no note ninguna dijerencia muy grave, solo algunos aspectos de diseño que ofrece cada navegador-->
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="actividad4A_.css">
+    <title>formulario</title>
+</head>
+
+<body id="body">
+    <header>
+        <div class="containerMenu">
+            <div class="menu">
+                <h1>
+                    hotels tarea
+                </h1>
+                <nav id="nav">
+                    <ul>
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Servicios</a></li>
+                        <li><a href="#">Nosotros</a></li>
+                        <li><a href="#" class="selected" id="busqueda">Busqueda avanzada</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="btns">
+            <input type="submit" id="btnC" class="btnS" name="btn" value="Cerrar formulario">
+            <input type="submit" id="btnD" class="btnS" name="btn" value="Contraste alto">
+            <input type="submit" id="btnE" class="btnS" name="btn" value="Colores windows">
+        </div>
+    </header>
+    <div id="containerTodo" class="containerTodo">
+        <form action="app.js" name="formulario" method="get" id="formulario">
+            <div id="containerPersonal">
+                <h1>Informacion personal</h1>
+                <label class="requerido"> Nombre completo</label>
+                <input type="text" name="nombre" id="nombre" required class="inputs">
+                <!--de esta forma le decimos al navegador que si no llena este documento no puede avanzar-->
+                <label class="requerido">correo electronico: </label>
+                <input type="email" id="mail" name="user_mail" required class="inputs">
+                <!--de esta forma le decimos al navegador que si no llena este documento no puede avanzar, en el type escribimos
+                email de forma en la que interpreta que es un correo electronico, entonces el formato tiene que ser el adecuado-->
+
+                <label for="ciudad">ciudad: </label>
+                <input type="text" id="ciudad" name="user_ciudad" class="inputs">
+
+                <label for="colonia">colonia: </label>
+                <input type="text" id="colonia" name="user_ciudad" class="inputs">
+
+                <label for="direccion">direccion: </label>
+                <input type="text" id="direccion" name="user_direccion" class="inputs">
+
+                <label for="fecha" class="requerido"> fecha de ingreso: </label>
+                <input type="date" id="fecha" name="user_date" required class="inputs">
+                <!--de esta forma le decimos al navegador que si no llena este documento no puede avanzar, ademas de
+                    que en el type seleccionamos date para que el formato cambie automaticamente-->
+
+                <label for="fecha_s" class="requerido"> fecha de salida: </label>
+                <input type="date" id="fecha_s" name="user_date_s" required class="inputs">
+                <!--de esta forma le decimos al navegador que si no llena este documento no puede avanzar, ademas de
+                    que en el type seleccionamos date para que el formato cambie automaticamente-->
+
+                <label class="requerido">contraseña: </label>
+                <input type="password" id="contraseña" name="user_contraseña" required class="inputs">
+                <!--de esta forma le decimos al navegador que si no llena este documento no puede avanzar, ademas de
+                que en el type seleccionamos contraseña para que el formato cambie automaticamente-->
+
+                <label class="requerido">repetir contraseña: </label>
+                <input type="password" id="contraseña2" name="user_contraseña" required class="inputs">
+                <!--de esta forma le decimos al navegador que si no llena este documento no puede avanzar, ademas de
+                que en el type seleccionamos contraseña para que el formato cambie automaticamente-->
+            </div>
+            <div id="containerServicios">
+                <h1>servicios</h1>
+                <table>
+                    <tr>
+                        <td>
+                            <label class="label"><input type="checkbox" id="cbox1" >Aire acondicionado</label>
+                        </td>
+                        <td>
+                            <label class="label"><input type="checkbox" id="cbox2" >Caja fuerte</label>
+                        </td>
+                        <td>
+                            <label class="label"><input type="checkbox" id="cbox3" >Mini bar</label>
+                        </td>
+                        <td>
+                            <label class="label"><input type="checkbox" id="cbox4" >Conexion a internet</label>
+                        </td>
+                        <td>
+                            <label class="label"><input type="checkbox" id="cbox5" >Almohadas</label>
+                        </td>
+                        <td>
+                            <label class="label"><input type="checkbox" id="cbox6" >Sky</label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="containerHabitacion">
+                <h1>Tipo de habitacion</h1>
+                <table>
+                    <tr>
+                        <td>
+                            <label class="label"><input type="radio">Individual</label>
+                        </td>
+                        <td>
+                            <label class="label"><input type="radio">Doble</label>
+                        </td>
+                        <td>
+                            <label class="label"><input type="radio">Suite</label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="containerPension">
+                <h1>Pension</h1>
+                <table>
+                    <tr>
+                        <td>
+                            <label class="label"><input type="radio">Alojamiento</label>
+                        </td>
+                        <td>
+                            <label class="label"><input type="radio">Desayuno</label>
+                        </td>
+                        <td>
+                            <label class="label"><input type="radio">Media</label>
+                        </td>
+                        <td>
+                            <label class="label"><input type="radio">Completa</label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="containerComentarios">
+                <h1>Comentarios</h1>
+                <textarea name="comentarios" id="comentario" cols="35" rows="7"></textarea>
+            </div>
+            <div id="containerTerminos">
+                <label class="label"><input type="checkbox" id="cbox7requerido7" required >Terminos y condiciones</label>
+            </div>
+            <input type="submit" id="btn" name="btn" value="Enviar">
+            <!--en este input declare el boton para que al presionarlo simulara enviar datos-->
+        </form>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
